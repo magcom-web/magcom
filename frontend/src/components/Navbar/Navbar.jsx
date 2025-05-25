@@ -20,7 +20,7 @@ const NavBar = () => {
       <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} navLinks={navLinks} />
       
       <div className='px-4 md:px-20'>
-        <div className="relative flex items-center justify-center mt-8 px-3 pt-5">
+        <div className="relative flex items-center justify-center mt-5 pb-3 pt-3">
           <button
             className="absolute top-7 left-4 focus:outline-none"
             aria-label="Toggle menu"
