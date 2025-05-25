@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SideBar from './Sidebar';
+import SideBar from '../Sidebar/Sidebar';
 
 const navLinks = [
   { label: 'HOME', href: '/' },
@@ -27,7 +27,7 @@ const NavBar = () => {
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
             <img
-              src="/hamburger.svg"
+              src="/src/assets/hamburger.svg"
               alt="Hamburger Menu"
               width={30}
               height={30}
@@ -38,7 +38,7 @@ const NavBar = () => {
           <h1 className="text-black text-4xl sm:text-6xl md:text-8xl text-center custom-imfell">
             MAG
             <img
-              src="/logo.svg"
+              src="/src/assets/logo.svg"
               alt="logo"
               width={50}
               height={50}

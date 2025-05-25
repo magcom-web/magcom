@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="flex justify-center gap-3 items-center">
           <Link to="/">
             <img
-              src="/Instagram_black.svg"
+              src="/src/assets/Instagram_black.svg"
               alt="Instagram"
               width={28}
               height={28}
@@ -32,7 +32,7 @@ const Footer = () => {
           </Link>
           <Link to="/">
             <img
-              src="/Geo_black.svg"
+              src="/src/assets/Geo_black.svg"
               alt="Location"
               width={28}
               height={28}
@@ -48,7 +48,7 @@ const Footer = () => {
           ))}
           <Link to="/">
             <img
-              src="/Mail_black.svg"
+              src="/src/assets/Mail_black.svg"
               alt="Mail"
               width={28}
               height={28}
