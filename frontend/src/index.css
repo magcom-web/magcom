@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+body {
+  box-sizing: border-box;
+  
+}
+@font-face {
+  font-family: 'IM Fell English Local';
+  src: url('/src/assets/fonts/IMFellEnglish-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inria Serif Local';
+  src: url('/src/assets/fonts/InriaSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Newsreader Local';
+  src: url('/src/assets/fonts/Newsreader-variableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.custom-imfell {
+  font-family: 'IM Fell English Local', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.custom-inria{
+  font-family: 'Iria Serif Local', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.custom-newsreader{
+  font-family: 'Newsreader Local', serif;
+  font-weight: 400;
+  font-style: normal;
+}
