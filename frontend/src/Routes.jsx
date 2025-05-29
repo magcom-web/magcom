@@ -5,8 +5,6 @@ import Governance from './pages/Sgb/Sgb';
 import ArticlePage from './pages/Articles/ArticlePage';
 
 
-
-
 const AppRoutes = () => (
   <Routes>
     <Route path="/articles" element={<Articles />} />
