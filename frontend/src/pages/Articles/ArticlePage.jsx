@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { articles } from './Articles';
+import { articlesData } from './ArticlesData';
 import arrowIcon from '../../assets/arrowIcon.svg';
 
 
@@ -8,7 +8,7 @@ import arrowIcon from '../../assets/arrowIcon.svg';
 const ArticlePage = () => {
   const { id } = useParams();
   const navigate=useNavigate();
-  const article = articles.find((item) => item.id === parseInt(id));
+  const article = articlesData.find((item) => item.id === parseInt(id));
 
   if (!article) {
     return <div className="custom-inria text-center mt-10 text-red-600 text-xl">Article not found.</div>;

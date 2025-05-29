@@ -1,4 +1,4 @@
-export const articles = [
+export const articlesData = [
     {
       id: 1,
       title: 'Title of the Article',
