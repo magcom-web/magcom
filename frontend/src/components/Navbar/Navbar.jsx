@@ -20,7 +20,7 @@ const NavBar = () => {
       <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} navLinks={navLinks} />
       
       <div className='px-4 md:px-20'>
-        <div className="relative flex items-center justify-center mt-5 pb-3 pt-3">
+        <div className="relative flex items-center justify-center mt-5  pt-3">
           <button
             className="absolute top-7 left-4 focus:outline-none"
             aria-label="Toggle menu"
@@ -46,6 +46,15 @@ const NavBar = () => {
             />
             COM
           </h1>
+
+          {/* <div className="ml-auto absolute top-7 right-4 text-right pr-2 text-gray-700 text-sm sm:text-base md:text-lg">
+              {new Date().toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+          </div> */}
         </div>
 
         <p className="text-[#413E3E] text-base sm:text-xl md:text-2xl custom-inria mb-5 text-center">
@@ -64,6 +73,7 @@ const NavBar = () => {
                 {link.label}
               </Link>
             ))}
+            
           </div>
         </nav>
       </div>

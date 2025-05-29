@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <footer className="custom-newsreader px-4 md:px-20 py-10 mt-10 relative">
       <div className="border-t border-black text-[#a4a4a4] flex flex-col md:flex-row justify-between items-center gap-4 pt-10 pb-6 text-center md:text-left">
-        <p className="text-sm">HOME</p>
+        <Link to="/" className="text-sm">HOME</Link>
         <div
           className="text-sm cursor-pointer hover:underline"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           BACK TO TOP
         </div>
-        <p className="text-sm">TEAM</p>
+        <Link to="/team" className="text-sm">TEAM</Link>
       </div>
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 items-center text-sm gap-y-4 text-center md:text-left">
