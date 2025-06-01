@@ -37,3 +37,23 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.swiper-pagination-bullet {
+  background-color: #555 !important; /* Inactive dots (dark gray/black) */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important; /* Active dot (black) */
+}
+.swiper-slide {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+.swiper-wrapper {
+  cursor: pointer;
+}
+.swiper-slide-shadow,
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none !important;
+}
