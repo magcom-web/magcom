@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SideBar from '../Sidebar/Sidebar';
 
 const navLinks = [
@@ -22,7 +22,7 @@ const NavBar = () => {
       <div className='px-4 md:px-20'>
         <div className="relative flex items-center justify-center mt-1  pt-3">
           <button
-            className="absolute top-5 left-3 sm:top-5 sm:left-5 md:top-7 md:left-4 focus:outline-none"
+            className="absolute top-5 left-3 sm:top-5 sm:left-5 md:top-7 md:left-1 focus:outline-none"
             aria-label="Toggle menu"
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
@@ -64,14 +64,18 @@ const NavBar = () => {
         <nav className="relative border-t border-b border-black custom-inria">
           <div className="hidden md:flex w-full justify-between items-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl h-12">
             {navLinks.map((link, index) => (
-              <Link
+              <NavLink
                 key={index}
                 to={link.href}
-                className="text-black transition-all duration-100 hover:border-t-4 hover:border-b-3 hover:border-black p-1.5"
+                className={({ isActive }) =>
+                  `text-black transition-all duration-100 p-1.5 hover:border-t-4 hover:border-b-3 hover:border-black` +
+                  (isActive ? ' border-t-4 border-b-3 border-black ' : '')
+                }
                 style={{ margin: 0 }}
+              
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
             
           </div>
