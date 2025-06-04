@@ -4,7 +4,7 @@ import Articles from './pages/Articles/Articles';
 import Governance from './pages/Sgb/Sgb';
 import ArticlePage from './pages/Articles/ArticlePage';
 import ArchiveSlider from './pages/Archives/ArchiveSlider';
-import Team from './pages/Team/Team';
+import Team from './components/Team/Team';
 
 const AppRoutes = () => (
   <Routes>
