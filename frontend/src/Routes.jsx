@@ -4,8 +4,8 @@ import Articles from './pages/Articles/Articles';
 import Governance from './pages/Sgb/Sgb';
 import ArticlePage from './pages/Articles/ArticlePage';
 import ArchiveSlider from './pages/Archives/ArchiveSlider';
-import Team from './components/Team/Team';
 import Event from './components/EventTile/Event';
+import Team from './pages/Team/Team';
 
 const AppRoutes = () => (
   <Routes>
