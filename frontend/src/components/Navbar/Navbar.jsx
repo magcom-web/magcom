@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'PREVIOUS EDITIONS', href: '/previous-editions' },
   { label: 'SGB RECORDS', href: '/sgb-records' },
   { label: 'EVENT GALLERY', href: '/event-gallery' },
-  { label: 'DARK MODE', href: '/dark-mode' },
+  { label: 'YEARBOOK', href: '/yearbook' },
 ];
 
 const NavBar = () => {
@@ -20,9 +20,9 @@ const NavBar = () => {
       <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} navLinks={navLinks} />
       
       <div className='px-4 md:px-20'>
-        <div className="relative flex items-center justify-center mt-5  pt-3">
+        <div className="relative flex items-center justify-center mt-1  pt-3">
           <button
-            className="absolute top-7 left-4 focus:outline-none"
+            className="absolute top-5 left-3 sm:top-5 sm:left-5 md:top-7 md:left-4 focus:outline-none"
             aria-label="Toggle menu"
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
@@ -31,18 +31,18 @@ const NavBar = () => {
               alt="Hamburger Menu"
               width={30}
               height={30}
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+              className="w-4 h-4 sm:w-8 sm:h-8 md:w-10 md:h-10"
             />
           </button>
 
-          <h1 className="text-black text-4xl sm:text-6xl md:text-8xl text-center custom-imfell">
+          <h1 className="text-black text-3xl sm:text-6xl md:text-8xl text-center custom-imfell">
             MAG
             <img
               src="/src/assets/logo.svg"
               alt="logo"
               width={50}
               height={50}
-              className="inline pb-3 md:w-20 md:h-20 lg:w-30 lg:h-30"
+              className="inline pb-3 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30"
             />
             COM
           </h1>
@@ -57,7 +57,7 @@ const NavBar = () => {
           </div> */}
         </div>
 
-        <p className="text-[#413E3E] text-base sm:text-xl md:text-2xl custom-inria mb-5 text-center">
+        <p className="text-[#413E3E] text-xs sm:text-xl md:text-2xl custom-inria md:mb-5 mb-2 -mt-2 text-center">
           Lorem ipsum nibh dictumst iaculis kljsdk lskjflk k ksjd
         </p>
 
