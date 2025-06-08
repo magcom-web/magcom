@@ -43,10 +43,10 @@ const TeamSection = ({ title, members }) => (
 const TeamPage = () => {
   return (
     <div className="relative text-black px-4 sm:px-8 md:px-20 py-10 font-serif overflow-hidden">
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 text-center">
+      <h1 className="custom-inria text-4xl md:text-6xl font-bold text-center text-gray-900 mb-8">
         Meet the Team Behind the Pages
       </h1>
-      <p className="text-center text-sm md:text-base lg:text-lg mb-8 max-w-xl mx-auto">
+      <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-xl mx-auto">
         Lorem ipsum nibh dictumst iaculis kljsdk lskjflk k ksjd
       </p>
       <h2 className="text-lg md:text-2xl font-semibold text-center border-y py-3 mb-10">

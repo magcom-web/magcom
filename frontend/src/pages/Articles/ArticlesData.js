@@ -1,7 +1,7 @@
 export const articlesData = [
     {
       id: 1,
-      title: 'Title of the Article',
+      title: 'Title of the Article ',
       author: 'Name of Writer',
       date: '20-05-2025',
       content:
@@ -48,7 +48,7 @@ export const articlesData = [
 
     {
       id: 4,
-      title: 'Title of the Article',
+      title: 'Title of the Article Icecream',
       author: 'Name of Writer',
       date: '20-05-2025',
       content:
@@ -64,7 +64,7 @@ export const articlesData = [
     {
       id: 5,
       title: 'Title of the Article',
-      author: 'Name of Writer',
+      author: 'author',
       date: '20-05-2025',
       content:
         `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat

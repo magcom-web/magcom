@@ -7,14 +7,14 @@ import ArchiveSlider from './pages/Archives/ArchiveSlider';
 import Event from './components/EventTile/Event';
 import Team from './pages/Team/Team';
 
-const AppRoutes = () => (
+const AppRoutes = ({ showSearch }) => (
   <Routes>
-    <Route path="/articles" element={<Articles />} />
-    <Route path="/sgb-records" element={<Governance/>}></Route>
+    <Route path="/articles" element={<Articles showSearch={showSearch} />} />
+    <Route path="/sgb-records" element={<Governance />} />
     <Route path="/articles/:id" element={<ArticlePage />} />
     <Route path="/previous-editions" element={<ArchiveSlider />} />
-    <Route path="/team" element= {<Team />} />
-    <Route path="/event-gallery" element= {<Event />} />
+    <Route path="/team" element={<Team />} />
+    <Route path="/event-gallery" element={<Event />} />
   </Routes>
 );
 

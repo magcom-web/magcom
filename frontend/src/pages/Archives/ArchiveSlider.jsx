@@ -73,7 +73,7 @@ export default function ArchiveSlider() {
               >
                 <div className="flex justify-center items-center h-[740px]">
                   <div
-                    className="relative bg-cover bg-center border border-[#e5dccc] rounded-xl p-8 pt-24 max-w-[550px] w-full h-[806px]"
+                    className="relative bg-cover bg-center  rounded-xl p-8 pt-24 max-w-[550px] w-full h-[806px]"
                     style={{
                       backgroundImage: "url('/src/assets/paper_text.png')",
                       backgroundSize: "cover",
