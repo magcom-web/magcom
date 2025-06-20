@@ -6,6 +6,7 @@ import ArticlePage from './pages/Articles/ArticlePage';
 import ArchiveSlider from './pages/Archives/ArchiveSlider';
 import Event from './components/EventTile/Event';
 import Team from './pages/Team/Team';
+import YearBook from './pages/YearBook/YearBook';
 
 const AppRoutes = ({ showSearch }) => (
   <Routes>
@@ -15,6 +16,7 @@ const AppRoutes = ({ showSearch }) => (
     <Route path="/previous-editions" element={<ArchiveSlider />} />
     <Route path="/team" element={<Team />} />
     <Route path="/event-gallery" element={<Event />} />
+    <Route path="/year_book" element={<YearBook />} />
   </Routes>
 );
 
