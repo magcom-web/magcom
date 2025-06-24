@@ -1,74 +1,84 @@
-import React from 'react';
-import NavBar from '../components/NavBar'; // Adjust path as needed
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const cards = [
+    {
+      label: "Articles",
+      path: "/articles",
+      emoji: "📖",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+    {
+      label: "SGB Records",
+      path: "/sgb-records",
+      emoji: "🏛️",
+      description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+    {
+      label: "Archives",
+      path: "/previous-editions",
+      emoji: "🗃️",
+      description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+    {
+      label: "Gallery",
+      path: "event-gallery",
+      emoji: "🖼️",
+      description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+    {
+      label: "Yearbook",
+      path: "/Yearbook",
+      emoji: "📘",
+      description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+    {
+      label: "Team",
+      path: "/team",
+      emoji: "👥",
+      description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat necessitatibus fuga",
+    },
+  ];
+
   return (
-    <div className="bg-[#fdfcfb] text-black min-h-screen">
-      <NavBar />
+    <div className="min-h-screen text-black font-serif px-4 md:px-16 py-16">
+      {/* Hero Section */}
+      <div className="text-center mb-20">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight">
+          Welcome to MAGCOM
+        </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl italic">
+          Explore the voices of NITC through articles, archives, and memories that define our campus life.
+        </p>
+      </div>
 
-      {/* Grid Layout for Articles */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-20 py-10">
-
-        {/* Left Side - SGB RECORDS */}
-        <div className="space-y-4">
-          <img
-            src="/im"
-            alt="SGB"
-            className="w-full h-52 object-cover rounded"
-          />
-          <div>
-            <p className="text-xs text-gray-600 font-semibold uppercase">SGB Records</p>
-            <h3 className="text-lg font-bold">Lorem ipsum sed</h3>
-            <p className="text-xs text-gray-500 mb-2">April 25</p>
-            <p className="text-sm text-gray-700">
-              Usu tantas omittantur ut, per te modo appetere senserit. Ei ius aperiam tincidunt,
-              ea sit natum iisque repudiandae. Ea nec wisi facete.
-              <br />Ex hinc rebum omittam his. Enim dolore meliore ea mea. Ius ei minim possit
-              intellegat, an sea ornatus.
-            </p>
-            <p className="text-gray-500 mt-2 underline">Read More....</p>
-          </div>
-        </div>
-
-        {/* Center - Featured Article */}
-        <div className="space-y-4">
-          <img
-            src="/images/feature.jpg"
-            alt="Featured Article"
-            className="w-full h-64 object-cover rounded"
-          />
-          <div className="text-center">
-            <p className="text-xs text-gray-600 font-semibold uppercase">Articles</p>
-            <h2 className="text-2xl font-bold mb-1">
-              Lorem ipsum sed id mauris in fusce.
-            </h2>
-            <p className="text-xs text-gray-500 mb-2">April 25</p>
-            <p className="text-sm text-gray-700 px-4">
-              Faucibus id sed. Vel bibendum malesuada augue at sed lectus tincidunt.
-              Eget elementum ultrices feugiat et proin lorem.
-            </p>
-            <p className="text-gray-500 mt-2 underline">Read More Articles....</p>
-          </div>
-        </div>
-
-        {/* Right Side - PREVIOUS EDITIONS */}
-        <div className="space-y-4">
-          <div>
-            <p className="text-xs text-gray-600 font-semibold uppercase">Previous Editions</p>
-            <h3 className="text-lg font-bold">Lorem ipsum fgg fglk sed</h3>
-            <p className="text-xs text-gray-500 mb-2">April 25</p>
-            <p className="text-sm text-gray-700">
-              Usu tantas omittantur ut, per te modo appetere senserit. Ei ius aperiam tincidunt,
-              ea sit natum iisque repudiandae. Ea nec wisi facete. Ex hinc rebum omittam his.
-              Enim dolore meliore ea mea. Ius ei minim possit intellegat, an sea ornatus.
-            </p>
-          </div>
-          <img
-            src="/images/sgb.jpg"
-            alt="Previous"
-            className="w-full h-40 object-cover rounded"
-          />
-        </div>
+      {/* Navigation Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {cards.map((item, index) => (
+          <Link
+            key={index}
+            to={item.path}
+            className="group bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center"
+          >
+            <div className="text-7xl mb-4 group-hover:scale-110 transition-transform duration-300 ease-in-out">
+              {item.emoji}
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold uppercase text-gray-800 tracking-wide mb-3">
+              {item.label}
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">{item.description}</p>
+            <span className="text-gray-400 font-semibold text-sm hover:underline">
+            Explore →
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );
