@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const SideBar = ({ isOpen, onClose, navLinks }) => {
   return (
@@ -14,14 +14,15 @@ const SideBar = ({ isOpen, onClose, navLinks }) => {
       </div>
       <nav className="flex flex-col p-4 space-y-4">
         {navLinks.map((link, idx) => (
-          <Link
+          <NavLink
             key={idx}
             to={link.href}
-            className="text-black hover:underline custom-inria"
+            className={({isActive})=>`not-only:text-black hover:underline custom-inria`+
+            (isActive ? ' border-t-2 border-b-2 border-black ' : '')}
             onClick={onClose}
           >
             {link.label}
-          </Link>
+          </NavLink>
         ))}
       </nav>
     </div>
