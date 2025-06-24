@@ -23,12 +23,12 @@ const YearSlider = ({ currentIndex, setCurrentIndex }) => {
 
   return (
     <div className="font-serif w-full max-w-lg text-black">
-      <div className="w-full h-px bg-gray-400"></div>
-      <div className="flex items-center justify-between py-5">
+      <div className="w-full h-px bg-gray-800"></div>
+      <div className="flex items-center justify-between py-1">
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
-          className="disabled:opacity-30 transition-opacity"
+          className="text-black transition-all duration-100 p-1.5 hover:underline hover:underline-offset-4 disabled:opacity-30"
         >
           <ArrowLeft size={32} />
         </button>
@@ -46,14 +46,13 @@ const YearSlider = ({ currentIndex, setCurrentIndex }) => {
                   className="relative text-center flex-shrink-0"
                   style={{ width: `${itemWidthRem}rem`, marginRight: `${gapRem}rem` }}
                 >
-                  <span className={`text-5xl ${isSelected ? "font-bold text-black" : "text-gray-400"}`}>
+                  <span className={`text-5xl ${isSelected ? "font-bold text-black border-t-2 border-b-2 border-black py-1" : "text-gray-400"}`}>
                     {year}
                   </span>
                   {isSelected && (
-                    <>
-                      <div className="absolute -top-3 left-0 w-full h-1 bg-black"></div>
-                      <div className="absolute -bottom-3 left-0 w-full h-1 bg-black"></div>
-                    </>
+                    <div className="absolute inset-x-0 flex justify-center">
+                      <div className="w-full max-w-[calc(100%-1rem)] h-[2px] bg-black"></div>
+                    </div>
                   )}
                 </div>
               );
@@ -64,12 +63,12 @@ const YearSlider = ({ currentIndex, setCurrentIndex }) => {
         <button
           onClick={handleNext}
           disabled={currentIndex === years.length - 1}
-          className="disabled:opacity-30 transition-opacity"
+          className="text-black transition-all duration-100 p-1.5 hover:underline hover:underline-offset-4 disabled:opacity-30"
         >
           <ArrowRight size={32} />
         </button>
       </div>
-      <div className="w-full h-px bg-gray-400"></div>
+      <div className="w-full h-px bg-gray-800"></div>
     </div>
   );
 };
