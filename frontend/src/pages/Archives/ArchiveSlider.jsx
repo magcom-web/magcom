@@ -1,44 +1,59 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState, useEffect } from 'react';
 import { Navigation, Pagination, EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
+import { fetcharchivesData } from "./ArchiveData";
+import { editions } from "./ArchiveData";
 
-const editions = [
-  {
-    year: "2023",
-    title: "MAGAZINE",
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
-    necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
-    cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
-    perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
-    consequuntur ex exercitationem`,
-    link: "/pdfs/magazine-2023.pdf",
-  },
-  {
-    year: "2022",
-    title: "MAGAZINE",
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
-    necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
-    cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
-    perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
-    consequuntur ex exercitationem`,
-    link: "/pdfs/magazine-2022.pdf",
-  },
-  {
-    year: "2021",
-    title: "MAGAZINE",
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
-    necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
-    cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
-    perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
-    consequuntur ex exercitationem`,
-    link: "/pdfs/magazine-2021.pdf",
-  },
-];
+// const editions = [
+//   {
+//     year: "2023",
+//     title: "MAGAZINE",
+//     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
+//     necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
+//     cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
+//     perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
+//     consequuntur ex exercitationem`,
+//     link: "/pdfs/magazine-2023.pdf",
+//   },
+//   {
+//     year: "2022",
+//     title: "MAGAZINE",
+//     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
+//     necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
+//     cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
+//     perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
+//     consequuntur ex exercitationem`,
+//     link: "/pdfs/magazine-2022.pdf",
+//   },
+//   {
+//     year: "2021",
+//     title: "MAGAZINE",
+//     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur adipisci animi similique quaerat
+//     necessitatibus fuga commodi quidem eligendi. Voluptatibus ab fuga ut temporibus natus quibusdam 
+//     cupiditate? Nisi et inventore sequi rem, officia fugit eius maiores voluptatem assumenda 
+//     perspiciatis expedita error ducimus tempora eaque voluptas quidem dicta laborum,
+//     consequuntur ex exercitationem`,
+//     link: "/pdfs/magazine-2021.pdf",
+//   },
+// ];
 
 export default function ArchiveSlider() {
+  const [allArchives, setAllArchives] = useState([]);
+  const [filteredArticles, setFilteredArticles] = useState([]);
+  
+    useEffect(() => {
+    const getArticles = async () => {
+      const data = await fetcharchivesData();
+      setAllArchives(data);
+      setFilteredArticles(data);
+    };
+  
+    getArticles();
+  }, []);
     return (
       <section className="min-h-screen py-10 px-4 flex flex-col items-center">
         <h1 className="custom-inria text-4xl md:text-6xl font-bold text-center text-gray-900 mb-8">

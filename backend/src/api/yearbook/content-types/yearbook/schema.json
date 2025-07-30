@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "yearbooks",
+  "info": {
+    "singularName": "yearbook",
+    "pluralName": "yearbooks",
+    "displayName": "Yearbook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "quote": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "batch": {
+      "type": "string"
+    }
+  }
+}

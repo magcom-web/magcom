@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sgbs",
+  "info": {
+    "singularName": "sgb",
+    "pluralName": "sgbs",
+    "displayName": "SGB",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "full": {
+      "type": "text"
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}

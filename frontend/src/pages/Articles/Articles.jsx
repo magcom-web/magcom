@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Articlecard from '../../components/Articlecard/Articlecard';
 import { articlesData } from './ArticlesData';
+import {fetchArticlesData} from './ArticlesData';
 
 const Articles = ({ showSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredArticles, setFilteredArticles] = useState(articlesData);
+const [allArticles, setAllArticles] = useState([]);
+const [filteredArticles, setFilteredArticles] = useState([]);
 
   useEffect(() => {
+  const getArticles = async () => {
+    const data = await fetchArticlesData();
+    setAllArticles(data);
+    setFilteredArticles(data);
+  };
+
+  getArticles();
+}, []);
+  useEffect(() => {
+    
     if (searchTerm.trim() === '') {
       setFilteredArticles(articlesData);
     } else {

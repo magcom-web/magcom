@@ -18,7 +18,7 @@ const AppRoutes = ({ showSearch }) => (
     <Route path="/previous-editions" element={<ArchiveSlider />} />
     <Route path="/team" element={<Team />} />
     <Route path="/event-gallery" element={<Event />} />
-    <Route path="/year_book" element={<YearBook />} />
+    <Route path="/yearbook" element={<YearBook />} />
   </Routes>
 );
 

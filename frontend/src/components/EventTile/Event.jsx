@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+const API_URL = import.meta.env.VITE_PUBLIC_API_URL;
+const API_DOMAIN = import.meta.env.VITE_PUBLIC_API_DOMAIN;
+
 
 const events = [
   { image: './src/assets/event1.png', description: 'Annual Fest - 2024' },
@@ -17,14 +21,40 @@ const events = [
 
 export default function Event() {
   const INITIAL_COUNT = 8;
+  const [events, setEvents] = useState([]);
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
+  useEffect(() => {
+  const fetchEvents = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/event-galleries?populate=*`);
+
+      const data = response.data.data.map((item) => {
+        const description = item.description;
+        const image = item.image;
+
+        const imageUrl = image?.formats?.medium?.url || image?.url || "";
+
+        return {
+          image: imageUrl ? `${API_DOMAIN}${imageUrl}` : "",
+          description,
+        };
+      });
+
+      setEvents(data);
+    } catch (error) {
+    }
+  };
+
+  fetchEvents();
+}, []);
+
 
   const handleLoadMore = () => {
     setVisibleCount(events.length);
   };
 
   const visibleEvents = events.slice(0, visibleCount);
-
   return (
     <div className="p-6 min-h-screen">
 

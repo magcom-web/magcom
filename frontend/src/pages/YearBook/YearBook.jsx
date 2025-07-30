@@ -1,16 +1,53 @@
-import React, { useState } from 'react';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import YearSlider from '../../components/YearBookSlider/YearBookSlider';
 import yearBookPhoto from '../../assets/year_book.svg';
 import { ArrowRight } from 'lucide-react';
+const API_URL = import.meta.env.VITE_PUBLIC_API_URL;
+const API_DOMAIN = import.meta.env.VITE_PUBLIC_API_DOMAIN;
 
-const batchData = Array(6).fill({
-    img: yearBookPhoto,
-    quote: '“Lorem ipsum integer vel pellentesque sit biben.”',
-    branch: 'CSE',
-});
+
+
+// const batchData = Array(6).fill({
+//     image: yearBookPhoto,
+//     quote: '“Lorem ipsum integer vel pellentesque sit biben.”',
+//     branch: 'CSE',
+// });
 
 const YearBook = () => {
     const [currentIndex, setCurrentIndex] = useState(1);
+    const [batchData, setEvents] = useState([]);
+
+  useEffect(() => {
+  const fetchYearBook = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/yearbooks?populate=*`);
+
+      const data = response.data.data.map((item) => {
+        const imageFormats = item.image?.formats;
+        const imageUrl =
+          imageFormats?.small?.url ||
+          imageFormats?.thumbnail?.url ||
+          item.image?.url ||
+          "";
+
+
+        return {
+          image: imageUrl ? `${API_DOMAIN}${imageUrl}` : "",
+          quote: item.quote || "",
+          branch: item.branch || "",
+          batch:item.batch||""
+        };
+      });
+
+      setEvents(data);
+    } catch (error) {
+    }
+  };
+
+  fetchYearBook();
+}, []);
+
 
     return (
         <div className="flex flex-col items-center justify-center relative mt-10 px-2">
@@ -26,7 +63,7 @@ const YearBook = () => {
                     {batchData.map((batch, idx) => (
                         <div key={idx} className="flex flex-col items-center">
                             <img
-                                src={batch.img}
+                                src={batch.image}
                                 alt="Batch"
                                 className="w-full max-w-[395px] h-[220px] md:h-[263px] object-cover border-[3px] md:border-[4px] border-black"
                             />
