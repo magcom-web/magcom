@@ -1,0 +1,10 @@
+<svg width="118" height="129" viewBox="0 0 118 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="1.5" width="114.983" height="126" rx="3.5" stroke="#1C1813" stroke-width="3"/>
+<rect x="11.1851" y="13.5" width="96.4935" height="73" rx="3.5" stroke="#1C1813" stroke-width="3"/>
+<path d="M53.6022 118.372L54.0252 96.9275L68.9533 108.034L53.6022 118.372Z" fill="black" stroke="#1C1813"/>
+<line y1="-1" x2="40.1629" y2="-1" transform="matrix(0.569986 -0.821654 0.745205 0.666836 12.3267 71)" stroke="#1C1813" stroke-width="2"/>
+<line y1="-1" x2="15.4209" y2="-1" transform="matrix(0.628058 -0.778166 0.692725 0.721201 58.9917 61)" stroke="#1C1813" stroke-width="2"/>
+<line y1="-1" x2="33.7042" y2="-1" transform="matrix(0.757583 0.652738 -0.555436 0.831559 33.458 39)" stroke="#1C1813" stroke-width="2"/>
+<line y1="-1" x2="52.4134" y2="-1" transform="matrix(0.688743 0.725005 -0.632247 0.774767 66.916 50)" stroke="#1C1813" stroke-width="2"/>
+<path d="M86.7266 29C90.634 29 94.0908 32.8547 94.0908 38C94.0908 43.1453 90.634 47 86.7266 47C82.8192 46.9998 79.3623 43.1452 79.3623 38C79.3623 32.8548 82.8192 29.0002 86.7266 29Z" stroke="#1C1813" stroke-width="2"/>
+</svg>

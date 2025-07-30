@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import image from "../assets/img1.jpeg"
 
 const meetings = [
@@ -71,7 +72,7 @@ export default function Governance() {
                 className="h-24 object-cover rounded"
               /> */}
               <h3 className="mt-3 font-bold text-base custom-inria">SGB Constitution</h3>
-              <a href="#" className="text-blue-800 underline text-sm">View PDF</a>
+              <Link to="#" className="text-black underline text-sm">View PDF</Link>
             </div>
           </aside>
 
@@ -90,11 +91,12 @@ export default function Governance() {
                     ))}
                   </ul>
                   <button
-                    onClick={() => toggleExpand(idx)}
-                    className="text-sm text-blue-800 underline mt-1"
-                  >
-                    {expandedIndex === idx ? 'Hide Full Minutes' : 'View Full Minutes'}
-                  </button>
+  onClick={() => toggleExpand(idx)}
+  className="text-sm !text-black underline mt-1"
+  style={{ color: 'black !important' }}
+>
+  {expandedIndex === idx ? 'Hide Full Minutes' : 'View Full Minutes'}
+</button>
                   {expandedIndex === idx && (
                     <div className="mt-2 text-[15px] leading-relaxed">
                       {meeting.full.map((line, j) => (

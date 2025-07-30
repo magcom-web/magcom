@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'PREVIOUS EDITIONS', href: '/previous-editions' },
   { label: 'SGB RECORDS', href: '/sgb-records' },
   { label: 'EVENT GALLERY', href: '/event-gallery' },
-  { label: 'YEARBOOK', href: '/yearbook' },
+  { label: 'YEARBOOK', href: '/year_book' },
 ];
 
 const NavBar = ({ onSearchIconClick }) => {

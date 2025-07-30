@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 const events = [
-  { image: './src/assets/event1.png', description: 'Annual Fest - 2024' },
+  { image: './src/assets/event2.png', description: 'Annual Fest - 2024' },
   { image: './src/assets/event2.png', description: 'Tech Workshop: React & Node' },
-  { image: './src/assets/event3.png', description: 'Cultural Night with Performances' },
+  { image: './src/assets/event2.png', description: 'Cultural Night with Performances' },
   { image: './src/assets/event2.png', description: 'AI & ML Bootcamp' },
-  { image: './src/assets/event1.png', description: 'Photography Contest' },
-  { image: './src/assets/event1.png', description: 'Robotics Showcase' },
-  { image: './src/assets/event1.png', description: 'Eco Awareness Drive' },
+  { image: './src/assets/event2.png', description: 'Photography Contest' },
+  { image: './src/assets/event2.png', description: 'Robotics Showcase' },
+  { image: './src/assets/event2.png', description: 'Eco Awareness Drive' },
   { image: './src/assets/event2.png', description: 'Open Mic & Talent Show' },
-  { image: './src/assets/event1.png', description: 'Alumni Meet 2024' },
+  { image: './src/assets/event2.png', description: 'Alumni Meet 2024' },
   { image: './src/assets/event2.png', description: 'Startup Pitch Day' },
-  { image: './src/assets/event1.png', description: 'Blood Donation Camp' },
+  { image: './src/assets/event2.png', description: 'Blood Donation Camp' },
   { image: './src/assets/event3.png', description: 'Art & Craft Exhibition' },
 ];
 
@@ -40,7 +40,7 @@ export default function Event() {
               alt={`Event ${index}`}
               className="w-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-2">
+            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center px-2">
               <p className="text-white text-center text-sm sm:text-base font-semibold">
                 {event.description}
               </p>
