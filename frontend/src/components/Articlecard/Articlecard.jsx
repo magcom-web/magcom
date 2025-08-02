@@ -1,5 +1,5 @@
 import React from 'react'
-import arrowIcon from '../../assets/arrowIcon.svg';
+import arrowIcon from '/arrowIcon.svg';
 import { useNavigate } from 'react-router-dom';
 const Articlecard = ({id,title,author,date,content,imageUrl}) => {
   const navigate=useNavigate();

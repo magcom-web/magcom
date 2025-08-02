@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { articlesData } from './ArticlesData';
-import arrowIcon from '../../assets/arrowIcon.svg';
+import arrowIcon from '/arrowIcon.svg';
 
 
 

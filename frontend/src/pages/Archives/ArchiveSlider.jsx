@@ -45,7 +45,7 @@ export default function ArchiveSlider() {
           Looking Back: <span>Archives</span>
         </h1>
   
-        <div className="relative w-full max-w-6xl bg-[url('/src/assets/Archive.png')] bg-cover bg-center border border-[#3d2b1f] p-6 md:p-10">
+        <div className="relative w-full max-w-6xl bg-[url('/Archive.png')] bg-cover bg-center border border-[#3d2b1f] p-6 md:p-10">
           {/* Arrows */}
           <button className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 text-5xl text-gray-700 font-thin z-10">
             ←
@@ -75,7 +75,7 @@ export default function ArchiveSlider() {
                   <div
                     className="relative bg-cover bg-center  rounded-xl p-8 pt-24 max-w-[550px] w-full h-[806px]"
                     style={{
-                      backgroundImage: "url('/src/assets/paper_text.png')",
+                      backgroundImage: "url('/paper_text.png')",
                       backgroundSize: "cover",
                     }}
                   >

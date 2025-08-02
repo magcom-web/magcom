@@ -31,7 +31,7 @@ const NavBar = ({ onSearchIconClick }) => {
             onClick={() => setSidebarOpen(!sidebarOpen)}
           >
             <img
-              src="/src/assets/hamburger.svg"
+              src="/hamburger.svg"
               alt="Hamburger Menu"
               width={30}
               height={30}
@@ -42,7 +42,7 @@ const NavBar = ({ onSearchIconClick }) => {
           <h1 className="text-black text-3xl sm:text-6xl md:text-8xl text-center custom-imfell">
             MAG
             <img
-              src="/src/assets/logo.svg"
+              src="/logo.svg"
               alt="logo"
               width={50}
               height={50}

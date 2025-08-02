@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import YearSlider from '../../components/YearBookSlider/YearBookSlider';
-import yearBookPhoto from '../../assets/year_book.svg';
+import yearBookPhoto from '/year_book.svg';
 import { ArrowRight } from 'lucide-react';
 
 const batchData = Array(6).fill({

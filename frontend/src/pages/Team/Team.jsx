@@ -1,5 +1,5 @@
 import React from 'react';
-import teamPic from '../../assets/team.png';
+import teamPic from '/team.png';
 
 const teamData = {
   editorialBoard: [
